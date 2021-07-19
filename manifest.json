@@ -1,6 +1,26 @@
 {
-    "name":"Tutorial typer",
+    "name": "Tutorial typer",
     "description": "Build your silent tutorials easily! Paste your prepaired text",
     "version": "1.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action":{
+"default_icon":{
+    "32": "/images/typing_icon.png"
+}
+    },
+    "options_page": "options.html",
+    "icons": {
+        "16": "/images/typing_icon16.png",
+        "32": "/images/typing_icon.png",
+        "48": "/images/typing_icon48.png",
+        "128": "/images/typing_icon128.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ]
 }
