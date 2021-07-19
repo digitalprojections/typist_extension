@@ -18,6 +18,13 @@
         "48": "/images/typing_icon48.png",
         "128": "/images/typing_icon128.png"
     },
+    "content_scripts": [
+        {
+        "content_security_policy":"script-src 'self' https://inventivesolutions.tech; object-src 'self'",
+          "matches": ["<all_urls>"],
+          "js": ["tutorial_typist.js"]
+        }
+      ],
     "permissions": [
         "storage",
         "activeTab",
