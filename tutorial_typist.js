@@ -1,10 +1,10 @@
 chrome.storage.sync.get(["allowed_page"], function (result) {
-  console.log('Value currently is ' + result.key);
-  if(result.key){
+  console.log("Value currently is " + result.key);
+  if (result.key) {
+    //TODO not yet implemented. Plan is to start the app on the selected page, automatically
     start();
   }
 });
-
 
 function start() {
   var myText = window.prompt("Tutorial typist", "type or paste text");
@@ -36,23 +36,15 @@ function start() {
   }
 }
 
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  sendResponse({ message: "response from content" });
 
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-	  	  
-      sendResponse( {"message":"response from content"} );
-	  
-	  var rm = request.message;
-	  console.log("Hi from content " + rm);
-	   if (rm=="start")
-	 {
-		console.log("starting the tutorial builder");
-		///////////////////////////////// CODE HERE ///////////////////////////////////////
-start();
-		///////////////////////////////// CODE HERE ///////////////////////////////////////
-		
-		
-	 }
-    
+  var rm = request.message;
+  console.log("Hi from content " + rm);
+  if (rm == "start") {
+    console.log("starting the tutorial builder");
+    ///////////////////////////////// CODE HERE ///////////////////////////////////////
+    start();
+    ///////////////////////////////// CODE HERE ///////////////////////////////////////
   }
-);
+});
