@@ -9,7 +9,8 @@
     "action":{
 "default_icon":{
     "32": "/images/typing_icon.png"
-}
+},
+"default_popup": "popup.html"
     },
     "options_page": "options.html",
     "icons": {
@@ -27,6 +28,7 @@
       ],
     "permissions": [
         "storage",
+        "tabs",
         "activeTab",
         "scripting"
     ]

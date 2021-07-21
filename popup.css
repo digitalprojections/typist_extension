@@ -1,0 +1,22 @@
+button#start {
+    width: inherit;
+    height: 50px;
+    font-size: inherit;
+}
+
+body {
+    text-align: center;
+    background-color: mintcream;
+}
+
+div#url_list {
+    width: inherit;
+    height: 200px;
+    background-color: aliceblue;
+}
+
+p {
+    background: #ffffff85;
+    padding: 5px;
+    margin: 2px;
+}
